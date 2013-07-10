@@ -46,3 +46,9 @@ source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
 export PATH=$PATH:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin
+
+# fasd
+which fasd > /dev/null && {
+    eval "$(fasd --init auto)"
+    alias v='f -e vim' # quick opening files with vim
+}
