@@ -1,12 +1,16 @@
 [alias]
+	b = branch
 	ba = branch -av
 	co = checkout
 	l1 = log --oneline
 	l1g = log --oneline --graph
 	d = diff
 	dc = diff --cached
+	st = status
 [diff]
 	color = always
 [user]
 	name = Antti Rasmus
 	email = antti.rasmus@gmail.com
+[core]
+	editor = vim
