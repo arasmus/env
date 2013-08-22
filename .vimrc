@@ -42,6 +42,7 @@ set smartcase                   " ... unless they contain at least one capital l
 let mapleader = ","
 nmap <leader>w :w!<cr>
 nmap <leader>q :q<cr>
+nmap <silent> ,/ :nohlsearch<CR>
 
 " Don't redraw while executing macros (good performance config)
 set lazyredraw
