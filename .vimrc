@@ -1,8 +1,30 @@
 set nocompatible                " choose no compatibility with legacy vi
+
+"" Neobundle setup
+if has('vim_starting')
+    set runtimepath+=~/.vim/bundle/neobundle.vim/
+endif
+
+call neobundle#rc(expand('~/.vim/bundle/'))
+
+NeoBundleFetch 'Shougo/neobundle.vim'
+NeoBundle 'Shougo/vimproc'
+
+"" Plugins
+NeoBundle 'tpope/vim-ragtag'
+NeoBundle 'scrooloose/nerdcommenter'
+NeoBundle 'gregsexton/MatchTag'
+NeoBundle 'YankRing.vim'
+NeoBundle 'matchit.zip'
+NeoBundleCheck
+
+let g:ragtag_global_maps = 1
+
+"" Generic
 syntax enable
 set encoding=utf-8
 set showcmd                     " display incomplete commands
-filetype plugin indent on       " load file type plugins + indentation
+filetype plugin indent on       " load file type plugins + indentation (must be after neobundle init)
 
 "" Whitespace
 set nowrap                      " don't wrap lines
