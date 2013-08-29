@@ -11,6 +11,7 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 NeoBundle 'Shougo/vimproc'
 
 "" Plugins
+NeoBundle 'TeX-PDF'
 NeoBundle 'tpope/vim-ragtag'
 NeoBundle 'scrooloose/nerdcommenter'
 NeoBundle 'gregsexton/MatchTag'

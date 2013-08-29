@@ -46,6 +46,9 @@ source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
 export PATH=$PATH:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin
+export PATH=$PATH:/usr/local/texlive/2013basic/bin/x86_64-darwin
+
+alias vim='mvim -v'
 
 # fasd
 which fasd > /dev/null && {
