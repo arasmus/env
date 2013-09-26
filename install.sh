@@ -14,3 +14,4 @@ d=~/.vim/bundle
 mkdir -p $d
 test -d $d/neobundle.vim || git clone git://github.com/Shougo/neobundle.vim $d/neobundle.vim
 vim +NeoBundleInstall! +q
+ln -s $ENVDIR/vim/* $d/..
