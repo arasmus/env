@@ -16,11 +16,12 @@ NeoBundle 'tpope/vim-ragtag'
 NeoBundle 'tpope/vim-surround'
 NeoBundle 'tpope/vim-obsession'
 NeoBundle 'tpope/vim-fugitive'
-NeoBundle 'tpope/vim-speeddating'
+NeoBundle 'tpope/vim-repeat'
 NeoBundle 'scrooloose/nerdcommenter'
 NeoBundle 'gregsexton/MatchTag'
 NeoBundle 'YankRing.vim'
 NeoBundle 'matchit.zip'
+NeoBundle 'ivanov/vim-ipython'
 NeoBundleCheck
 
 let g:ragtag_global_maps = 1

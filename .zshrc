@@ -5,7 +5,7 @@ ZSH=$HOME/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="mh"
+ZSH_THEME="michelebologna"
 
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
@@ -27,7 +27,7 @@ ZSH_THEME="mh"
 # DISABLE_AUTO_TITLE="true"
 
 # Uncomment following line if you want to disable command autocorrection
-# DISABLE_CORRECTION="true"
+DISABLE_CORRECTION="true"
 
 # Uncomment following line if you want red dots to be displayed while waiting for completion
 # COMPLETION_WAITING_DOTS="true"
@@ -45,11 +45,19 @@ plugins=(git)
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-export PATH=$PATH:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin
-export PATH=$PATH:/usr/local/share/npm/bin
-export PATH=$PATH:/usr/local/texlive/2013basic/bin/x86_64-darwin
+export PATH=$PATH:$HOME/bin
+export PATH=$PATH:/usr/local/bin
+export PATH=$PATH:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin
 
-alias vim='mvim -v'
+# Linux specific
+if [[ $(uname) == "Darwin" ]] {
+    export PATH=$PATH:/usr/local/share/npm/bin
+    export PATH=$PATH:/usr/local/texlive/2013basic/bin/x86_64-darwin
+    export PATH=$PATH:/usr/local/share/python
+
+    export PYTHONPATH=/usr/local/lib/python2.7/site-packages:$PYTHONPATH
+    alias vim='mvim -v'
+}
 
 # fasd
 which fasd > /dev/null && {
