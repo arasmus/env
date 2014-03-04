@@ -22,6 +22,7 @@ NeoBundle 'gregsexton/MatchTag'
 NeoBundle 'YankRing.vim'
 NeoBundle 'matchit.zip'
 NeoBundle 'ivanov/vim-ipython'
+NeoBundle 'hynek/vim-python-pep8-indent'
 NeoBundleCheck
 
 let g:ragtag_global_maps = 1
