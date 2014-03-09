@@ -23,6 +23,7 @@ NeoBundle 'YankRing.vim'
 NeoBundle 'matchit.zip'
 NeoBundle 'ivanov/vim-ipython'
 NeoBundle 'hynek/vim-python-pep8-indent'
+NeoBundle 'nvie/vim-flake8'
 NeoBundleCheck
 
 let g:ragtag_global_maps = 1
@@ -68,6 +69,7 @@ set matchtime=2
 
 " Filetypes
 " See .vim/ftplugin/*.vim
+autocmd FileType python map <buffer> <leader>f :call Flake8()<CR>
 
 set foldmethod=indent
 set foldlevel=9         " No indentation by default
