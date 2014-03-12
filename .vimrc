@@ -24,6 +24,8 @@ NeoBundle 'matchit.zip'
 NeoBundle 'ivanov/vim-ipython'
 NeoBundle 'hynek/vim-python-pep8-indent'
 NeoBundle 'nvie/vim-flake8'
+NeoBundle 'scrooloose/syntastic'
+"NeoBundle 'klen/python-mode'
 NeoBundleCheck
 
 let g:ragtag_global_maps = 1
