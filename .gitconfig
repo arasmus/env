@@ -16,3 +16,7 @@
 	editor = vim
 [push]
 	default = simple
+[color]
+	ui = true
+[github]
+	user = arasmus
