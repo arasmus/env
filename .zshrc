@@ -67,3 +67,6 @@ which fasd > /dev/null && {
     eval "$(fasd --init auto)"
     alias v='f -e vim' # quick opening files with vim
 }
+
+# Don't share history. It's annoying if working on several terminals
+unsetopt share_history
