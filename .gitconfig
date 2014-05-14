@@ -7,6 +7,8 @@
 	d = diff
 	dc = diff --cached
 	st = status
+	ss = stash save
+	sp = stash pop
 [diff]
 	color = always
 [user]
@@ -14,3 +16,9 @@
 	email = antti.rasmus@gmail.com
 [core]
 	editor = vim
+[push]
+	default = simple
+[color]
+	ui = true
+[github]
+	user = arasmus

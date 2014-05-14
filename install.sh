@@ -15,3 +15,9 @@ mkdir -p $d
 test -d $d/neobundle.vim || git clone git://github.com/Shougo/neobundle.vim $d/neobundle.vim
 vim +NeoBundleInstall! +q
 ln -s $ENVDIR/vim/* $d/..
+
+# GitHub commandline interface
+d=~/bin
+mkdir -p $d
+test -f $d/ghi || \
+    curl -s https://raw.github.com/stephencelis/ghi/master/ghi > $d/ghi && chmod 755 ghi
