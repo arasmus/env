@@ -16,8 +16,6 @@
 	email = antti.rasmus@gmail.com
 [core]
 	editor = vim
-[push]
-	default = simple
 [color]
 	ui = true
 [github]
