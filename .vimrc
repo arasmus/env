@@ -51,6 +51,15 @@ set smartcase                   " ... unless they contain at least one capital l
 " Show n lines between the window border and cursor
 set scrolloff=2
 
+" Statusline
+set laststatus=2
+set statusline=
+set statusline+=%<\                       " cut at start
+set statusline+=%2*[%n%H%M%R%W]%*\        " flags and buf no
+set statusline+=%1((%l,%c)%)\             " line and column
+set statusline+=%-4P                      " percentage of file
+set statusline+=%-40f                     " path
+
 " More sensible list chars
 set listchars=tab:>\ ,trail:-,extends:>,precedes:<,nbsp:+
 if !has('win32') && (&termencoding ==# 'utf-8' || &encoding ==# 'utf-8')
@@ -62,12 +71,33 @@ let mapleader = ","
 nmap <leader>w :w!<cr>
 nmap <leader>q :q<cr>
 nmap <silent> ,/ :nohlsearch<CR>
+map <C-L> :tabnext<cr>
+map <C-H> :tabprevious<cr>
+nmap <leader>cr :source ~/.vimrc<cr>
+nmap <leader>ce :tabe ~/.vimrc<cr>
+imap jk <Esc>
+
+" Quickfix window
+map <leader>cc :cope<cr>
+map <leader>n :cn<cr>
+map <leader>p :cp<cr>
+
+" git grep this word
+map <leader>* :Ggrep <C-R><C-W> *<CR>,
+
+" Plugin specific mappings,
+nmap <leader>so :OpenSession<cr>
+nmap <leader>sc :CloseSession<cr>
+nmap <leader>ss :SaveSession<cr>
 
 " Don't redraw while executing macros (good performance config)
 set lazyredraw
 
 " How many tenths of a second to blink when matching brackets
 set matchtime=2
+
+" Tag searching from current directory to a parent
+set tags=./tags;
 
 " Filetypes
 " See .vim/ftplugin/*.vim
