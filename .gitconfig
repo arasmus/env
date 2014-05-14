@@ -7,6 +7,8 @@
 	d = diff
 	dc = diff --cached
 	st = status
+	ss = stash save
+	sp = stash pop
 [diff]
 	color = always
 [user]
