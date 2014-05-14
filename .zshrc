@@ -70,3 +70,6 @@ which fasd > /dev/null && {
 
 # Don't share history. It's annoying if working on several terminals
 unsetopt share_history
+
+# Some local configurations
+test -e ~/.zshrc_local && source ~/.zshrc_local
