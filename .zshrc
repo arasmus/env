@@ -49,17 +49,17 @@ export PATH=$PATH:$HOME/bin
 export PATH=$PATH:/usr/local/bin
 export PATH=$PATH:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin
 
-# Linux specific
+# OsX specific
 if [[ $(uname) == "Darwin" ]] {
     # homebrew
+    export PATH=/usr/local/share/python:$PATH
     export PATH=/usr/local/bin:/usr/local/sbin:$PATH
     # latex
     export PATH=$PATH:/usr/local/texlive/2013basic/bin/x86_64-darwin
-    # ipython
-    export PATH=$PATH:/usr/local/share/python
 
     export PYTHONPATH=/usr/local/lib/python2.7/site-packages:$PYTHONPATH
     alias vim='mvim -v'
+    alias vi='mvim -v'
 }
 
 # fasd
