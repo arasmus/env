@@ -17,15 +17,24 @@ NeoBundle 'tpope/vim-surround'
 NeoBundle 'tpope/vim-obsession'
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'tpope/vim-repeat'
+NeoBundle 'tpope/vim-unimpaired'
 NeoBundle 'scrooloose/nerdcommenter'
 NeoBundle 'gregsexton/MatchTag'
 NeoBundle 'YankRing.vim'
 NeoBundle 'matchit.zip'
 NeoBundle 'ivanov/vim-ipython'
 NeoBundle 'hynek/vim-python-pep8-indent'
-NeoBundle 'nvie/vim-flake8'
 NeoBundle 'scrooloose/syntastic'
+"NeoBundle 'davidhalter/jedi-vim'
 "NeoBundle 'klen/python-mode'
+NeoBundle 'Valloric/YouCompleteMe'
+NeoBundle 'xolox/vim-misc'
+NeoBundle 'xolox/vim-session'
+let g:session_autosave_periodic = 1
+let g:session_autosave = 'no'
+" Colors
+NeoBundle 'twilight'
+NeoBundle 'solarized'
 NeoBundleCheck
 
 let g:ragtag_global_maps = 1
@@ -73,6 +82,24 @@ nmap <leader>q :q<cr>
 nmap <silent> ,/ :nohlsearch<CR>
 map <C-L> :tabnext<cr>
 map <C-H> :tabprevious<cr>
+nmap <D-1> 1gt
+nmap <D-2> 2gt
+nmap <D-3> 3gt
+nmap <D-4> 4gt
+nmap <D-5> 5gt
+nmap <D-6> 6gt
+nmap <D-7> 7gt
+nmap <D-8> 8gt
+nmap <D-9> 9gt
+imap <D-1> <Esc>1gt
+imap <D-2> <Esc>2gt
+imap <D-3> <Esc>3gt
+imap <D-4> <Esc>4gt
+imap <D-5> <Esc>5gt
+imap <D-6> <Esc>6gt
+imap <D-7> <Esc>7gt
+imap <D-8> <Esc>8gt
+imap <D-9> <Esc>9gt
 nmap <leader>cr :source ~/.vimrc<cr>
 nmap <leader>ce :tabe ~/.vimrc<cr>
 imap jk <Esc>
@@ -90,6 +117,9 @@ nmap <leader>so :OpenSession<cr>
 nmap <leader>sc :CloseSession<cr>
 nmap <leader>ss :SaveSession<cr>
 
+" mvim font
+set guifont=Source\ Code\ Pro\ Light:h16
+
 " Don't redraw while executing macros (good performance config)
 set lazyredraw
 
@@ -104,7 +134,7 @@ set tags=./tags;
 autocmd FileType python map <buffer> <leader>f :call Flake8()<CR>
 
 set foldmethod=indent
-set foldlevel=9         " No indentation by default
+set foldlevel=100
 
 nmap <leader>0 :set foldlevel=0<CR>
 nmap <leader>1 :set foldlevel=1<CR>
@@ -115,4 +145,4 @@ nmap <leader>5 :set foldlevel=5<CR>
 nmap <leader>6 :set foldlevel=6<CR>
 nmap <leader>7 :set foldlevel=7<CR>
 nmap <leader>8 :set foldlevel=8<CR>
-nmap <leader>9 :set foldlevel=9<CR>
+nmap <leader>9 :set foldlevel=100<CR>
